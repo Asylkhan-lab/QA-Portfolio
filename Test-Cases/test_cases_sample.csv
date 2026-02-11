@@ -1,0 +1,18 @@
+﻿ID,Title,Module,Priority,Preconditions,Steps,Test Data,Expected Result,Actual Result,Status,Environment
+TC-001,Login with valid credentials,Auth,High,User account exists,"1) Open login page
+2) Enter valid email
+3) Enter valid password
+4) Click 'Log in'","email=test.user@example.com, password=ValidPass123!",User is logged in and redirected to dashboard,,Not Run,Web / Chrome
+TC-002,Login with invalid password shows error,Auth,High,User account exists,"1) Open login page
+2) Enter valid email
+3) Enter invalid password
+4) Click 'Log in'","email=test.user@example.com, password=WrongPass!",Error message is shown; user stays on login page,,Not Run,Web / Chrome
+TC-003,Password field masks input,Auth,Medium,None,"1) Open login page
+2) Type any password into password field",password=AnyText,Password characters are hidden (masked),,Not Run,Web / Chrome
+TC-004,Logout ends session,Auth,High,User is logged in,"1) Click profile menu
+2) Click 'Logout'
+3) Refresh the page
+4) Try to open a protected URL",-,User is logged out; protected pages require login,,Not Run,Web / Chrome
+TC-005,Search returns relevant results,Search,Medium,Search feature is available,"1) Open search
+2) Enter query
+3) Submit",query=laptop,Results page shows items relevant to the query,,Not Run,Web / Chrome

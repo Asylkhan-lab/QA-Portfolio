@@ -1,0 +1,3 @@
+﻿ID,Title,Module,Severity,Priority,Environment,Status,Steps,Expected,Actual
+BUG-001,Login button remains disabled after invalid credentials,Auth,Major,High,Win10 / Chrome 121 / Web 1.0.12,Open,Invalid login -> error -> correct password -> button still disabled,Button enabled after correcting credentials,Button stays disabled until refresh
+BUG-002,Search results page shows duplicated items on fast repeated submit,Search,Minor,Medium,Win10 / Chrome 121,Open,Enter query -> press Enter quickly 2-3 times,Results listed once,Some items appear duplicated
